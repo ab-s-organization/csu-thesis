@@ -83,7 +83,7 @@
 % 而 1英寸＝25.4毫米，则1磅＝25.4/72≈0.353毫米。
 % 磅和 LaTeX的 pt- points (大约 1/72 inch) 是一致的。
 % 基本行间距设置
-\renewcommand*{\baselinestretch}{1.3}   % 几倍行间距
+\renewcommand*{\baselinestretch}{1.5}   % 几倍行间距
 \setlength{\baselineskip}{20pt}         % 基准行间距
 % \setlength{\bibsep}{0.5ex} % 参考文献条目间距
 
