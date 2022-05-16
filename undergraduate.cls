@@ -116,7 +116,7 @@
 \newCJKfontfamily[zysong]\songti{SimSun}[BoldFont=*, ItalicFont=*, BoldItalicFont=*]
 \newCJKfontfamily[zyhei]\heiti{SimHei}[BoldFont=*, ItalicFont=*, BoldItalicFont=*]
 \newCJKfontfamily[zykai]\kaiti{KaiTi}[BoldFont=*, ItalicFont=*, BoldItalicFont=*]
-\newCJKfontfamily[kaitigb]\kgb{KaiTi_GB2312.ttf}[BoldFont=*, ItalicFont=*, BoldItalicFont=*]
+\newCJKfontfamily[kaitigb]\kgb{KaiTi_GB2312.ttf}[Path=fonts/, BoldFont=*, ItalicFont=*, BoldItalicFont=*]
 % % 重定义ctex定义好的宋体和黑体，以支持伪加粗AutoFakeBold
 % % 即支持类似word里的给黑体、宋体等中文字体加粗的操作，用\bfseries
 \newfontfamily{\enheiti}{SimHei} % 解决标题英文括号不显示黑体
@@ -125,7 +125,7 @@
 \newcommand*{\csu@name@cover}{扉页}
 \newcommand*{\csu@name@abstract@zh}{中文摘要}
 \newcommand*{\csu@name@abstract@en}{英文摘要}
-\newcommand*{\csu@name@keywords}{关键字}
+\newcommand*{\csu@name@keywords}{关键词}
 \newcommand*{\csu@name@contents}{目录}
 \newcommand*{\csu@name@listfigure}{插图清单}
 \newcommand*{\csu@name@listtable}{附表清单}
@@ -356,6 +356,7 @@
 {
     \begin{flushleft}
         \noindent {\zihao{-4} \bfseries \songti 关键词：} {\zihao{-4} \songti \@keywordscn} \par % 关键词为小四号宋体加粗，内容为小四号宋体
+        % fixme 此处的“关键词”并没有加粗
     \end{flushleft}
 }
 
