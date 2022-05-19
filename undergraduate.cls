@@ -113,9 +113,9 @@
 % % 协议页的标题按模板是华文新魏
 % % Fix: 合并为 newCJKfontfamily
 \newCJKfontfamily[hwxw]\hwxw{STXinwei}[BoldFont=*, ItalicFont=*, BoldItalicFont=*]
-\newCJKfontfamily[zysong]\songti{SimSun}[BoldFont=*, ItalicFont=*, BoldItalicFont=*]
-\newCJKfontfamily[zyhei]\heiti{SimHei}[BoldFont=*, ItalicFont=*, BoldItalicFont=*]
-\newCJKfontfamily[zykai]\kaiti{KaiTi}[BoldFont=*, ItalicFont=*, BoldItalicFont=*]
+\newCJKfontfamily[zysong]\songti{SimSun}[AutoFakeBold={3.17}]
+\newCJKfontfamily[zyhei]\heiti{SimHei}[AutoFakeBold={3.17}]
+\newCJKfontfamily[zykai]\kaiti{KaiTi}[AutoFakeBold={3.17}]
 \newCJKfontfamily[kaitigb]\kgb{KaiTi_GB2312.ttf}[Path=fonts/, BoldFont=*, ItalicFont=*, BoldItalicFont=*]
 % % 重定义ctex定义好的宋体和黑体，以支持伪加粗AutoFakeBold
 % % 即支持类似word里的给黑体、宋体等中文字体加粗的操作，用\bfseries
@@ -355,7 +355,7 @@
 % 显示中文关键词和分类号
 {
     \begin{flushleft}
-        \noindent {\zihao{-4} \bfseries \songti 关键词：} {\zihao{-4} \songti \@keywordscn} \par % 关键词为小四号宋体加粗，内容为小四号宋体
+        \noindent {\zihao{-4} \songti \textbf{关键词：}} {\zihao{-4} \songti \@keywordscn} \par % 关键词为小四号宋体加粗，内容为小四号宋体
         % fixme 此处的“关键词”并没有加粗
     \end{flushleft}
 }
@@ -590,6 +590,7 @@
         % afterskip 默认为 2.3ex plus .2ex 适当缩减
         afterskip    = {1ex \@plus .2ex},
     },
+    % fixme subsection后的行间距不对
     subsection = {%
         format       = \zihao{-4} \kaiti,
         afterindent  = true,
