@@ -14,6 +14,22 @@
 % 使用了biblatex-gb7714-2015宏包，指定后端为biber
 \usepackage[backend=biber,style=gb7714-2015,gbnamefmt=uppercase,gbpub=false,gbpunctin=false]{biblatex}
 % 重定义参考文献字体为楷体GB_2312 字号5号
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelnumberwidth]{%
+        \printfield{labelprefix}%
+        \printfield{labelnumber}}}
+     {\setlength{\labelwidth}{\labelnumberwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}%
+      \renewcommand*{\makelabel}[1]{##1}}
+  {\endlist}
+  {\item}
+
+
 \renewcommand{\bibfont}{\zihao{5} \kgb}
 % 导入参考文献数据库
 \addbibresource{csuthesis_main.bib}
